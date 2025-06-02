@@ -12,14 +12,14 @@
         width: 100vw;
         height: 100vh;
         margin: 0;
+        overflow: hidden; /* Remove a barra de rolagem */
 
     }
 
 
 
     .Entrada {
-
-        display: flex;
+        display: flex; /* Usa flexbox para o layout */
         position: relative;
         flex-direction: column; /* Deixa as caixas de texto empilhadas */
         align-items: center; /* Centraliza verticalmente */
@@ -28,7 +28,7 @@
         height: 100%;
         gap: 20px; /* Dá espaçamento entre as caixas de texto */ 
         margin: 10px 10px 10px 10xp;
-        
+        z-index: 2; /* Garante que o conteúdo fique acima de outros elementos */
         
     }
 
@@ -50,6 +50,7 @@
         resize: none; /* Impede redimensionamento pelo usuário */
         border: none; /* Remove qualquer borda */
         outline: none; /* Remove contornos que aparecem ao clicar */
+        z-index: 1;
     }
 
 
@@ -61,33 +62,38 @@
         max-height: auto;
         width: 70%;
         height: auto;
+        z-index: 2; /* Garante que a imagem fique acima de outros elementos */
 
     }
      
     #canto1 {
-        position: relative;
-        max-width:80px;
-        max-height: auto;
-        width: 90%;
-        height: auto;
-        left: 0px;
-        top:10px;
-        transform: rotate(45deg); /* Rotaciona a imagem em 45 graus */
-        }
+    position: absolute;
+    bottom: -100px;
+    left: 0px;
+    max-width: 700px;
+    width: 90%;
+    height: auto;
+    transform: rotate(4deg);
+    z-index: 0; /* Fica atrás dos botões */
+}
 
 
 
     #canto2 {
-        position: relative;
-        max-width: 300px;
-        max-height: auto;
-        width: 90%;
-        height: auto;
+        position: absolute; /* Deixa o posicionamento absoluto */
+        max-width: 900px; /* Largura máxima de 900px */
+        max-height: auto; /* Altura automática */
+        width: 90%; /* Largura máxima de 90% */
+        height: auto; /* Ajusta a altura automaticamente */
+        right: -200px; /* Posiciona a imagem no canto direito */
+        top: -20px; /* Posiciona a imagem no canto superior */
+        z-index: 1; /* Garante que a imagem fique acima de outros elementos */
+        transform: rotate(160deg); 
     }
     #entrar { 
 
         width: auto;
-        height: clamp(40px, 5vh, 100px);
+        height: clamp(40px, 5vh, 100px); /* Altura ajustada */
         margin-top: 20px; /* Adiciona espaço acima do botão */
         background-color: #7700ff; /* Cor de fundo azul */
         color: white; /* Texto branco */
@@ -120,7 +126,7 @@
         border-radius: 20px; /* Arredonda as bordas */
         cursor: pointer; /* Mostra a mãozinha ao passar o mouse */
         transition: background-color 0.3s ease; /* Animação suave */
-        position: absolute;
+        position: absolute; /* Posiciona o botão de forma absoluta */
         left: 20px;
         
         
