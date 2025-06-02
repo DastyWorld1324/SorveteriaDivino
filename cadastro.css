@@ -1,0 +1,65 @@
+
+    body {
+        background-color: #ee67b6;
+        background-size: 100% 100%;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+    }
+
+    #user2{
+
+        position: relative;
+        justify-content: center;
+        width: 260px;
+        height: auto;
+    
+
+    }
+
+    .cadastro {
+
+        display: flex;
+        position: relative;
+        flex-direction: column; /* Deixa as caixas de texto empilhadas */
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Centraliza verticalmente */
+        font-family: 'Questrial', sans-serif;
+        height: 100vh; /* Define altura total da tela */
+        gap: 20px; /* Dá espaçamento entre as caixas de texto */ 
+        
+        
+    }
+
+    #cadastro {
+        position: relative; /*Deixa o posicionamento relativo */
+        width: 600px; /* Largura total */
+        max-width: 70%; /* Define o tamanho máximo que ele pode alcançar */ 
+        height: 20px; /* Altura ajustada */
+        padding: 20px; /* Espaçamento interno */
+        border-radius: 20px; /* Bordas arredondadas */
+        font-family: 'Questrial', sans-serif;
+        font-size: 20px; /* Tamanho da fonte */
+        background-color: #ffc5f0; /* Cor de fundo suave */
+        resize: none; /* Impede redimensionamento pelo usuário */
+        border: none; /* Remove qualquer borda */
+        outline: none; /* Remove contornos que aparecem ao clicar */
+        overflow: hidden;
+
+    }
+
+    #continuar {
+        margin-top: 20px; /* Adiciona espaço acima do botão */
+        background-color: #7700ff; /* Cor de fundo azul */
+        color: white; /* Texto branco */
+        padding: 10px 20px; /* Espaçamento interno */
+        font-size: 16px; /* Tamanho da fonte */
+        font-family: 'Questrial', sans-serif;
+        border: none; /* Remove a borda padrão */
+        border-radius: 20px; /* Arredonda as bordas */
+        cursor: pointer; /* Mostra a mãozinha ao passar o mouse */
+        transition: background-color 0.3s ease; /* Animação suave */
+    }
+    #continuar:hover     {
+        background-color: #d367ee; /* Muda a cor ao passar o mouse */
+    }
