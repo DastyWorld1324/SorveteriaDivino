@@ -5,6 +5,7 @@
         width: 100vw;
         height: 100vh;
         margin: 0;
+        overflow: hidden; /* Remove a barra de rolagem */
     }
 
     #user2{
@@ -30,7 +31,9 @@
         
         
     }
-
+    #continuar:hover     {
+        background-color: #d367ee; /* Muda a cor ao passar o mouse */
+    }
     #cadastro {
         position: relative; /*Deixa o posicionamento relativo */
         width: 600px; /* Largura total */

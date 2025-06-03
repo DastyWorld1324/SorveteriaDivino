@@ -1,19 +1,19 @@
 
     * {
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    margin: 0px;
+
 }
 
-    
+
     body {
         background-color: #ffffff;
-        background-size: 100% 100%;
-        width: 100vw;
-        height: 100vh;
-        margin: 0;
+        ;
         overflow: hidden; /* Remove a barra de rolagem */
-
+        display: flex
     }
 
 
@@ -22,24 +22,22 @@
         display: flex; /* Usa flexbox para o layout */
         position: relative;
         flex-direction: column; /* Deixa as caixas de texto empilhadas */
-        align-items: center; /* Centraliza verticalmente */
+        align-items: center; /* Centraliza horizontalmente */
         font-family: 'Questrial', sans-serif; /*Muda a fonte */
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh; /* Define altura total da tela */
         gap: 20px; /* Dá espaçamento entre as caixas de texto */ 
-        margin: 10px 10px 10px 10xp;
-        z-index: 2; /* Garante que o conteúdo fique acima de outros elementos */
+        overflow: hidden; /* Impede barra de rolagem */
         
     }
 
     #login {
-        
-        
+
+        display: flex; /* Usa flexbox para o layout */
         position: relative; /*Deixa o posicionamento relativo */
         width: 80%; /* Largura total */
         max-width: 600px; /* Define o tamanho máximo que ele pode alcançar */ 
-        height: 50px; /* Altura ajustada */
-        padding: 20px 20px 40px 20px; /* Espaçamento interno */
+        padding: 20px 20px 10px; /* Espaçamento interno */
         border-radius: 17px; /* Bordas arredondadas */
         font-family: 'Questrial', sans-serif;
         font-size: clamp(15px,3vw,20px); /* Tamanho da fonte */
@@ -50,7 +48,7 @@
         resize: none; /* Impede redimensionamento pelo usuário */
         border: none; /* Remove qualquer borda */
         outline: none; /* Remove contornos que aparecem ao clicar */
-        z-index: 1;
+        z-index: 2; /* Garante que o formulário fique acima de outros elementos */
     }
 
 
@@ -65,16 +63,19 @@
         z-index: 2; /* Garante que a imagem fique acima de outros elementos */
 
     }
-     
+
+
     #canto1 {
     position: absolute;
-    bottom: -100px;
-    left: 0px;
+    bottom: -15%;
+    left: 0%;
     max-width: 700px;
     width: 90%;
     height: auto;
     transform: rotate(4deg);
-    z-index: 0; /* Fica atrás dos botões */
+    z-index: 1;
+
+
 }
 
 
@@ -85,10 +86,10 @@
         max-height: auto; /* Altura automática */
         width: 90%; /* Largura máxima de 90% */
         height: auto; /* Ajusta a altura automaticamente */
-        right: -200px; /* Posiciona a imagem no canto direito */
-        top: -20px; /* Posiciona a imagem no canto superior */
-        z-index: 1; /* Garante que a imagem fique acima de outros elementos */
+        right: -18%; /* Posiciona a imagem no canto direito */
+        top: -15%; /* Posiciona a imagem no canto superior */
         transform: rotate(160deg); 
+        z-index: 1;
     }
     #entrar { 
 
@@ -106,7 +107,7 @@
         border-radius: 20px; /* Arredonda as bordas */
         cursor: pointer; /* Mostra a mãozinha ao passar o mouse */
         transition: background-color 0.3s ease; /* Animação suave */
-        
+        z-index: 2;
     }
 
     #entrar:hover {
@@ -128,6 +129,7 @@
         transition: background-color 0.3s ease; /* Animação suave */
         position: absolute; /* Posiciona o botão de forma absoluta */
         left: 20px;
+        z-index: 2;
         
         
     }
@@ -135,5 +137,28 @@
         background-color: #eeacd2; /* Muda a cor ao passar o mouse */
     }
 
+    @media (min-width: 260px) and (max-width: 450px) {
+        
+        #canto1 {
+            width: 140%;
+            bottom: -3%;
+            left: -1vw;
+        }
+        #canto2 {
+            width: 140%;
 
-
+            right: -20%; /* Posiciona a imagem no canto direito */
+            top: -2%; /* Posiciona a imagem no canto superior */
+        }
+        
+    }
+    @media (min-width: 500px) and (max-width: 1024px) {
+        #canto1 {
+            bottom: -4%;
+            left: 0%;
+        }
+        #canto2 {
+            right: -12%; /* Posiciona a imagem no canto direito */
+            top: -2%; /* Posiciona a imagem no canto superior */
+        }
+    }
