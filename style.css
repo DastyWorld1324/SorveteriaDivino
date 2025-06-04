@@ -11,7 +11,6 @@
 
     body {
         background-color: #ffffff;
-        ;
         overflow: hidden; /* Remove a barra de rolagem */
         display: flex
     }
@@ -23,6 +22,7 @@
         position: relative;
         flex-direction: column; /* Deixa as caixas de texto empilhadas */
         align-items: center; /* Centraliza horizontalmente */
+        justify-content: center; /* Centraliza verticalmente */
         font-family: 'Questrial', sans-serif; /*Muda a fonte */
         width: 100vw;
         height: 100vh; /* Define altura total da tela */
@@ -49,6 +49,7 @@
         border: none; /* Remove qualquer borda */
         outline: none; /* Remove contornos que aparecem ao clicar */
         z-index: 2; /* Garante que o formulário fique acima de outros elementos */
+        
     }
 
 
@@ -61,6 +62,7 @@
         width: 70%;
         height: auto;
         z-index: 2; /* Garante que a imagem fique acima de outros elementos */
+        
 
     }
 
@@ -92,7 +94,7 @@
         z-index: 1;
     }
     #entrar { 
-
+        position: relative; /* Deixa o posicionamento relativo */
         width: auto;
         height: clamp(40px, 5vh, 100px); /* Altura ajustada */
         margin-top: 20px; /* Adiciona espaço acima do botão */
@@ -107,7 +109,7 @@
         border-radius: 20px; /* Arredonda as bordas */
         cursor: pointer; /* Mostra a mãozinha ao passar o mouse */
         transition: background-color 0.3s ease; /* Animação suave */
-        z-index: 2;
+        z-index: 3;
     }
 
     #entrar:hover {
@@ -129,7 +131,7 @@
         transition: background-color 0.3s ease; /* Animação suave */
         position: absolute; /* Posiciona o botão de forma absoluta */
         left: 20px;
-        z-index: 2;
+        z-index: 3;
         
         
     }
@@ -143,10 +145,11 @@
             width: 140%;
             bottom: -3%;
             left: -1vw;
+            z-index: 1;
         }
         #canto2 {
             width: 140%;
-
+            z-index: 1;
             right: -20%; /* Posiciona a imagem no canto direito */
             top: -2%; /* Posiciona a imagem no canto superior */
         }
@@ -156,8 +159,10 @@
         #canto1 {
             bottom: -4%;
             left: 0%;
+            z-index: 1;
         }
         #canto2 {
+            z-index: 1;
             right: -12%; /* Posiciona a imagem no canto direito */
             top: -2%; /* Posiciona a imagem no canto superior */
         }

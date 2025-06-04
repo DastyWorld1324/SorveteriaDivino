@@ -1,6 +1,6 @@
 
     body {
-        background-color: #ee67b6;
+        background-color: #fcfcfc;
         background-size: 100% 100%;
         width: 100vw;
         height: 100vh;
@@ -14,10 +14,33 @@
         justify-content: center;
         width: 260px;
         height: auto;
+        z-index: 2;
     
 
     }
 
+    #canto {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        max-width: 1000px;
+        height: auto;
+        top: -80px;
+        left: -5px;
+        z-index: 1; /* Garante que o canto fique atrás do formulário */
+        transform: rotate(80deg); /* Rotaciona a imagem */
+    }
+    #canto2 {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        max-width: 1000px;
+        height: auto;
+        bottom: -200px;
+        right: -40px;
+        z-index: 1; /* Garante que o canto fique atrás do formulário */
+        transform: rotate(249deg); /* Rotaciona a imagem */
+    }
     .cadastro {
 
         display: flex;
@@ -27,7 +50,9 @@
         align-items: center; /* Centraliza verticalmente */
         font-family: 'Questrial', sans-serif;
         height: 100vh; /* Define altura total da tela */
-        gap: 20px; /* Dá espaçamento entre as caixas de texto */ 
+        gap: 10px; /* Dá espaçamento entre as caixas de texto */ 
+        z-index: 2;
+        overflow: hidden;
         
         
     }
@@ -48,10 +73,14 @@
         border: none; /* Remove qualquer borda */
         outline: none; /* Remove contornos que aparecem ao clicar */
         overflow: hidden;
+        z-index: 2;
+        white-space: nowrap;
+        text-overflow: clip; /* Adiciona reticências se o texto for muito longo */
 
     }
 
     #continuar {
+        position: relative; /* Deixa o botão posicionado relativo ao seu contêiner */
         margin-top: 20px; /* Adiciona espaço acima do botão */
         background-color: #7700ff; /* Cor de fundo azul */
         color: white; /* Texto branco */
@@ -62,7 +91,51 @@
         border-radius: 20px; /* Arredonda as bordas */
         cursor: pointer; /* Mostra a mãozinha ao passar o mouse */
         transition: background-color 0.3s ease; /* Animação suave */
+        z-index: 2;
     }
     #continuar:hover     {
         background-color: #d367ee; /* Muda a cor ao passar o mouse */
+    }
+
+    @media screen and (min-width: 100px) and (max-width: 299px) {
+        #canto {
+            width: 200%;
+            height: auto;
+        }
+        #canto2 {
+            width: 280%;
+            height: auto;
+        }
+    }
+    @media screen and (min-width: 300px) and (max-width: 450px) {
+        #canto {
+            width: 140%;
+            height: auto;
+        }
+        #canto2 {
+            width: 160%;
+            height: auto;
+        }
+    }
+    @media screen and (min-width: 451px) and (max-width: 600px) {
+        #canto {
+            width: 100%;
+            height: auto;
+
+        }
+        #canto2 {
+            width: 120%;
+            height: auto;
+        }
+    }
+     
+    @media screen and (min-width: 601px) and (max-width: 800px) {
+     #canto {
+            width: 80%;
+            height: auto;
+        }
+        #canto2 {
+            width: 100%;
+            height: auto;
+        }
     }
