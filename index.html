@@ -1,1 +1,80 @@
-<h1>Hello World<h1>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <title>Início</title>
+</head>
+<body>
+    <div class="containercima">
+        <input type="text" placeholder="Oque você deseja?" id="pesquisa">
+        <button id="filtros">
+            <img src="img/filtros.png" alt="filtros" id="imgfiltros">
+        </button>
+    </div>
+
+    <div class="produtos">
+        <div class="produto" id="produto1" onclick="compra(produto1)">
+            <img src="img/barca.jpeg" alt="barca fabulosa" id="imagem">
+            <p id="titulo">Barca Fabulosa</p>
+            <p id="preco">R$20,00</p>
+        </div>
+
+        <div class="produto" id="produto2" onclick="compra(produto2)">
+            <img src="img/casquinha.jpeg" alt="casquinha celestial" id="imagem">
+            <p id="titulo">Casquinha Celestial</p>
+            <p id="preco">R$9,00</p>
+        </div>
+
+        <div class="produto" id="produto3" onclick="compra(produto3)">
+            <img src="img/casca2bolas.jpeg" alt="Cascão Celestial" id="imagem">
+            <p id="titulo">Cascão Celestial</p>
+            <p id="preco">R$14,00</p>
+        </div>
+
+        <div class="produto" id="produto4" onclick="compra(produto4)">
+            <img src="img/cestinha.jpeg" alt="cestinha celestial" id="imagem">
+            <p id="titulo">Cestinha Celestial</p>
+            <p id="preco">R$20,00</p>
+        </div>
+
+        <div class="produto" id="produto5" onclick="compra(produto5)">
+            <img src="img/copãodeacai.jpeg" alt="Copo Fabuloso" id="imagem">
+            <p id="titulo">Copo Fabuloso</p>
+            <p id="preco">R$12,00</p>
+        </div>
+
+        <div class="produto" id="produto6" onclick="compra(produto6)">
+            <img src="img/copo de açai.jpeg" alt="Copinho Cabuloso" id="imagem">
+            <p id="titulo">Barca Fabulosa</p>
+            <p id="preco">R$20,00</p>
+        </div>
+
+        <div class="produto" id="produto7" onclick="compra(produto7)">
+            <img src="img/trufa.jpeg" alt="Trufa Divina" id="imagem">
+            <p id="titulo">Trufa Divina</p>
+            <p id="preco">R$16,00</p>
+        </div>
+
+        <div class="produto" id="produto8" onclick="compra(produto8)">
+            <img src="img/milkshake.jpeg" alt="Milk Shake" id="imagem">
+            <p id="titulo">Milk Shake</p>
+            <p id="preco">R$10,00</p>
+        </div>
+
+    </div>
+
+    
+    <div class="navegação">
+        <button>
+            
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
